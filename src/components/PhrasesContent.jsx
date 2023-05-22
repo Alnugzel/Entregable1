@@ -6,14 +6,21 @@ const PhrasesContent = ({ phrase, randomBg, colors }) => {
   };
 
   return (
-    <div className="random__phrase">
-      <div className="content__image">
-        <img src="/images/rectangle1.svg" alt="rectangle" />
+    <>
+      <div className="random__phrase">
+        <div className="content__image">
+          <img src="/images/rectangle1.svg" alt="rectangle" />
+        </div>
+        <div style={objStyleColors} className="content__phrase">
+          <p>{phrase.phrase}</p>
+        </div>
       </div>
-      <div style={objStyleColors} className="content__phrase">
-        <p>{phrase.phrase}</p>
+      <div style={objStyleColors} className="content__author">
+        {" "}
+        <span>Fuente: </span>
+        {phrase.author}
       </div>
-    </div>
+    </>
   );
 };
 
